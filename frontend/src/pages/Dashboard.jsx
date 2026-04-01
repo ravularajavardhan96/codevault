@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   const fetchSnippets = async (q = '') => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/snippets${q ? `?q=${q}` : ''}`, {
+      const res = await axios.get(`https://codevault-k7wu.onrender.com/api/snippets${q ? `?q=${q}` : ''}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSnippets(res.data);
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/snippets/${id}`, {
+      await axios.delete(`https://codevault-k7wu.onrender.com/api/snippets/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSnippets(snippets.filter(s => s._id !== id));

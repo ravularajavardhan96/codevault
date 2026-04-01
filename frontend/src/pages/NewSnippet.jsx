@@ -20,7 +20,7 @@ const NewSnippet = () => {
     if (!form.code.trim()) return setError('Code cannot be empty');
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/snippets', form, {
+      await axios.post('https://codevault-k7wu.onrender.com/api/snippets', form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       navigate('/');
