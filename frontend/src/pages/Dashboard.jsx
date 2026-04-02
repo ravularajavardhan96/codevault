@@ -11,7 +11,8 @@ const Dashboard = () => {
 
   const fetchSnippets = async (q = '') => {
     try {
-      const res = await axios.get(`${q ? `?q=${q}` : ''}`, {
+      // const res = await axios.get(`https://codevault-k7wu.onrender.com/api/snippets${q ? `?q=${q}` : ''}`, {  headers: { Authorization: `Bearer ${token}` });
+      const res = await axios.get(`https://codevault-k7wu.onrender.com/api/snippets${q ? `?q=${q}` : ''}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSnippets(res.data);

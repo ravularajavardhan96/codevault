@@ -15,7 +15,7 @@ const Register = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post('https://://codevault-k7wu.onrender.com/api/auth/register', form);
+      const res = await axios.post('https://codevault-k7wu.onrender.com/api/auth/register', form);
       login(res.data.user, res.data.token);
       navigate('/');
     } catch (err) {
